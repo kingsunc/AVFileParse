@@ -29,7 +29,7 @@ BaseBox* BaseBox::GetBoxFromFile(byteptr &pData)
 		printf(" find unknown type : %s, %d bytes. \n", strBoxType.c_str(), iBoxSize);
 
 #ifdef _DEBUG
-		getchar();
+		//getchar();
 #endif
 	}
 
