@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FileParse", "FileParse\FileParse.vcxproj", "{3DE5DFCF-B3DC-41A1-918B-9FF67F0D8B26}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MP4_Parse", "MP4_Parse\MP4_Parse.vcxproj", "{D80C61DE-95C3-4E90-A30A-3810C8ECD561}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FLV_Parse", "FLV_Parse\FLV_Parse.vcxproj", "{ACF300F5-9753-4E47-8D91-1D8105E76003}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Win32 = Release|Win32
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3DE5DFCF-B3DC-41A1-918B-9FF67F0D8B26}.Debug|Win32.ActiveCfg = Debug|Win32
-		{3DE5DFCF-B3DC-41A1-918B-9FF67F0D8B26}.Debug|Win32.Build.0 = Debug|Win32
-		{3DE5DFCF-B3DC-41A1-918B-9FF67F0D8B26}.Release|Win32.ActiveCfg = Release|Win32
-		{3DE5DFCF-B3DC-41A1-918B-9FF67F0D8B26}.Release|Win32.Build.0 = Release|Win32
+		{D80C61DE-95C3-4E90-A30A-3810C8ECD561}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D80C61DE-95C3-4E90-A30A-3810C8ECD561}.Debug|Win32.Build.0 = Debug|Win32
+		{D80C61DE-95C3-4E90-A30A-3810C8ECD561}.Release|Win32.ActiveCfg = Release|Win32
+		{D80C61DE-95C3-4E90-A30A-3810C8ECD561}.Release|Win32.Build.0 = Release|Win32
+		{ACF300F5-9753-4E47-8D91-1D8105E76003}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ACF300F5-9753-4E47-8D91-1D8105E76003}.Debug|Win32.Build.0 = Debug|Win32
+		{ACF300F5-9753-4E47-8D91-1D8105E76003}.Release|Win32.ActiveCfg = Release|Win32
+		{ACF300F5-9753-4E47-8D91-1D8105E76003}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
