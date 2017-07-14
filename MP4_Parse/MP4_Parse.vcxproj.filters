@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="头文件\Box">
+      <UniqueIdentifier>{55cb03b9-63d2-4a28-ab8c-b8102113b262}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="源文件\Box">
+      <UniqueIdentifier>{d06eabec-0942-43cc-bd32-8e664ce46002}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BaseBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="DinfBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="DrefBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="EdtsBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="ElstBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="FreeBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="FtypBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="HdlrBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="MdhdBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="MdiaBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="MinfBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="MoovBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="MvhdBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="SmhdBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="StblBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="TkhdBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="TrakBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="UdtaBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="UrlBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="MP4File.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="BoxFactory.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MdatBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="StsdBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="Avc1Box.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="AvcCBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="VmhdBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="StcoBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="StscBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="StssBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="StszBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="SttsBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="EsdsBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="Mp4aBox.cpp">
+      <Filter>源文件\Box</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BaseBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="DinfBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="DrefBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="EdtsBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="ElstBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="FreeBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="FtypBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="HdlrBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="MdhdBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="MdiaBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="MinfBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="MoovBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="MvhdBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="SmhdBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="StblBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="TkhdBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="TrakBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="UdtaBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="UrlBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="BoxFactory.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MP4File.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MdatBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="StsdBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="VmhdBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="AvcCBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="Avc1Box.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="StcoBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="StscBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="StssBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="StszBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="SttsBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="Mp4aBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="EsdsBox.h">
+      <Filter>头文件\Box</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

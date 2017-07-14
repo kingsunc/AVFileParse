@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D80C61DE-95C3-4E90-A30A-3810C8ECD561}</ProjectGuid>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>MP4_Parse</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>../bin_d</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>../bin</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Avc1Box.cpp" />
+    <ClCompile Include="AvcCBox.cpp" />
+    <ClCompile Include="BaseBox.cpp" />
+    <ClCompile Include="BoxFactory.cpp" />
+    <ClCompile Include="DinfBox.cpp" />
+    <ClCompile Include="DrefBox.cpp" />
+    <ClCompile Include="EdtsBox.cpp" />
+    <ClCompile Include="ElstBox.cpp" />
+    <ClCompile Include="EsdsBox.cpp" />
+    <ClCompile Include="FreeBox.cpp" />
+    <ClCompile Include="FtypBox.cpp" />
+    <ClCompile Include="HdlrBox.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MdatBox.cpp" />
+    <ClCompile Include="MdhdBox.cpp" />
+    <ClCompile Include="MdiaBox.cpp" />
+    <ClCompile Include="MinfBox.cpp" />
+    <ClCompile Include="MoovBox.cpp" />
+    <ClCompile Include="Mp4aBox.cpp" />
+    <ClCompile Include="MP4File.cpp" />
+    <ClCompile Include="MvhdBox.cpp" />
+    <ClCompile Include="SmhdBox.cpp" />
+    <ClCompile Include="StblBox.cpp" />
+    <ClCompile Include="StcoBox.cpp" />
+    <ClCompile Include="StscBox.cpp" />
+    <ClCompile Include="StsdBox.cpp" />
+    <ClCompile Include="StssBox.cpp" />
+    <ClCompile Include="StszBox.cpp" />
+    <ClCompile Include="SttsBox.cpp" />
+    <ClCompile Include="TkhdBox.cpp" />
+    <ClCompile Include="TrakBox.cpp" />
+    <ClCompile Include="UdtaBox.cpp" />
+    <ClCompile Include="UrlBox.cpp" />
+    <ClCompile Include="VmhdBox.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Avc1Box.h" />
+    <ClInclude Include="AvcCBox.h" />
+    <ClInclude Include="BaseBox.h" />
+    <ClInclude Include="BoxFactory.h" />
+    <ClInclude Include="DinfBox.h" />
+    <ClInclude Include="DrefBox.h" />
+    <ClInclude Include="EdtsBox.h" />
+    <ClInclude Include="ElstBox.h" />
+    <ClInclude Include="EsdsBox.h" />
+    <ClInclude Include="FreeBox.h" />
+    <ClInclude Include="FtypBox.h" />
+    <ClInclude Include="HdlrBox.h" />
+    <ClInclude Include="MdatBox.h" />
+    <ClInclude Include="MdhdBox.h" />
+    <ClInclude Include="MdiaBox.h" />
+    <ClInclude Include="MinfBox.h" />
+    <ClInclude Include="MoovBox.h" />
+    <ClInclude Include="Mp4aBox.h" />
+    <ClInclude Include="MP4File.h" />
+    <ClInclude Include="MvhdBox.h" />
+    <ClInclude Include="SmhdBox.h" />
+    <ClInclude Include="StblBox.h" />
+    <ClInclude Include="StcoBox.h" />
+    <ClInclude Include="StscBox.h" />
+    <ClInclude Include="StsdBox.h" />
+    <ClInclude Include="StssBox.h" />
+    <ClInclude Include="StszBox.h" />
+    <ClInclude Include="SttsBox.h" />
+    <ClInclude Include="TkhdBox.h" />
+    <ClInclude Include="TrakBox.h" />
+    <ClInclude Include="UdtaBox.h" />
+    <ClInclude Include="UrlBox.h" />
+    <ClInclude Include="VmhdBox.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

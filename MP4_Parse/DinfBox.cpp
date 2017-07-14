@@ -1,0 +1,16 @@
+#include "DinfBox.h"
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// DinfBox
+DinfBox::DinfBox()
+{
+}
+
+DinfBox::~DinfBox()
+{
+}
+
+BaseBox* DinfBox::CreateObject()
+{
+	return new DinfBox();
+}
