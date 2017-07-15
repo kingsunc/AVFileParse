@@ -20,10 +20,6 @@ public:
 	// 显示;
 	void Display();
 
-	// 起始dStart~dEnd的音视频保存文件;
-	double dStart = 0.3;
-	double dEnd = 0.7;
-
 protected:
 	// 解析数据;
 	bool ReadData(byte_ptr pData, int iSize);
