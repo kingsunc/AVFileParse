@@ -1,5 +1,8 @@
 #ifndef __BYTES_H__
 #define __BYTES_H__
+#include <wchar.h>
+#include <stdio.h>
+#include <assert.h>
 
 #ifdef _WIN32
 /* Windows is little endian only */
@@ -8,7 +11,13 @@
 #define __BYTE_ORDER __LITTLE_ENDIAN
 #define __FLOAT_WORD_ORDER __BYTE_ORDER
 
-typedef unsigned char uint8_t;
+typedef unsigned char		byte;
+typedef unsigned char		uint8_t;
+typedef unsigned short		uint16_t;
+typedef unsigned int		uint32_t;
+typedef unsigned long long	uint64_t;
+
+typedef byte*				byte_ptr;
 
 #else /* !_WIN32 */
 
@@ -27,6 +36,7 @@ typedef unsigned char uint8_t;
 #endif
 
 #endif /* !_WIN32 */
+#include <string>
 
 /* define default endianness */
 #ifndef __LITTLE_ENDIAN
@@ -60,5 +70,9 @@ typedef unsigned char uint8_t;
 #error "Unknown/unsupported byte order!"
 #endif
 
-#endif
+// 将pData后的iCount字节转换为数字
+int BytesToInt(byte_ptr pData, int iCount);
+// 将pData后的iCount字节转换为字符串;
+std::string BytesToStr(byte_ptr pData, int iCount);
 
+#endif

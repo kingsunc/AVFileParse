@@ -13,36 +13,84 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="3part">
-      <UniqueIdentifier>{b6acfb31-ef2e-49c5-8f3f-8ef8ba080be5}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AVFile.cpp">
+    <ClInclude Include="FLVFile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="amf.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="bytes.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FLVTag.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FLVTagHeader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FLVTagBody.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FLVFileHeader.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="FLVFileBody.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TagType.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TagAudio.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TagVideo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TagScript.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="FLVFile.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="FLVFile.cpp">
+    <ClCompile Include="amf.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="amf.cpp">
-      <Filter>3part</Filter>
+    <ClCompile Include="bytes.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="AVFile.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="FLVFile.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
-    <ClInclude Include="amf.h">
-      <Filter>3part</Filter>
-    </ClInclude>
-    <ClInclude Include="bytes.h">
-      <Filter>3part</Filter>
-    </ClInclude>
+    <ClCompile Include="FLVTag.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FLVTagHeader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FLVTagBody.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FLVFileHeader.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="FLVFileBody..cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TagType.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TagAudio.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TagVideo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TagScript.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

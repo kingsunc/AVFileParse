@@ -9,7 +9,6 @@
 
 #include <windows.h>
 #include <stdint.h>
-#include <stdio.h>
 
 #ifdef _MSC_VER	/* MSVC */
 #define snprintf _snprintf

@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{ACF300F5-9753-4E47-8D91-1D8105E76003}</ProjectGuid>
+    <ProjectGuid>{11C3C385-D48D-4EE8-B59A-1F0D272838F7}</ProjectGuid>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
     <RootNamespace>FLV_Parse</RootNamespace>
@@ -43,11 +43,10 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin_d</OutDir>
+    <OutDir>../bin_d</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin</OutDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -63,7 +62,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -71,16 +70,33 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="amf.cpp" />
-    <ClCompile Include="AVFile.cpp" />
-    <ClCompile Include="FLVFile.cpp" />
-    <ClCompile Include="main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="amf.h" />
-    <ClInclude Include="AVFile.h" />
     <ClInclude Include="bytes.h" />
     <ClInclude Include="FLVFile.h" />
+    <ClInclude Include="FLVFileBody.h" />
+    <ClInclude Include="FLVFileHeader.h" />
+    <ClInclude Include="FLVTag.h" />
+    <ClInclude Include="FLVTagBody.h" />
+    <ClInclude Include="FLVTagHeader.h" />
+    <ClInclude Include="TagAudio.h" />
+    <ClInclude Include="TagScript.h" />
+    <ClInclude Include="TagType.h" />
+    <ClInclude Include="TagVideo.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="amf.cpp" />
+    <ClCompile Include="bytes.cpp" />
+    <ClCompile Include="FLVFile.cpp" />
+    <ClCompile Include="FLVFileBody..cpp" />
+    <ClCompile Include="FLVFileHeader.cpp" />
+    <ClCompile Include="FLVTag.cpp" />
+    <ClCompile Include="FLVTagBody.cpp" />
+    <ClCompile Include="FLVTagHeader.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="TagAudio.cpp" />
+    <ClCompile Include="TagScript.cpp" />
+    <ClCompile Include="TagType.cpp" />
+    <ClCompile Include="TagVideo.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

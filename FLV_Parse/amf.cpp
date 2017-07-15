@@ -24,7 +24,6 @@
 */
 
 #include "amf.h"
-#include <assert.h>
 
 static const AMFObjectProperty AMFProp_Invalid = { { 0, 0 }, AMF_INVALID };
 static const AVal AV_empty = { 0, 0 };
