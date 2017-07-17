@@ -7,12 +7,14 @@ public:
 	CMP4File();
 	~CMP4File();
 
+	// 加载文件;
 	bool LoadFile(std::string strFile);
+	bool LoadFile(byte* pData, int iDataSize);
 
-	virtual bool ParseFile();
+	// 保存文件;
+	bool SaveFile(std::string strFile);
+	bool SaveFile();
 
 private:
-	byteptr	m_pData;
-	byteptr	m_pEnd;
 	VecBoxs m_vecBoxs;
 };

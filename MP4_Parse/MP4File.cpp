@@ -3,7 +3,6 @@
 
 CMP4File::CMP4File()
 {
-	m_pData = NULL;
 	m_vecBoxs.clear();
 }
 
@@ -14,36 +13,39 @@ CMP4File::~CMP4File()
 		delete *itor;
 	}
 	m_vecBoxs.clear();
-
-	if (m_pData)
-	{
-		delete []m_pData;
-		m_pData = NULL;
-	}
 }
 
 bool CMP4File::LoadFile(std::string strFile)
 {
 	FILE* pFile = fopen(strFile.c_str(), "rb");
+	if (!pFile)
+	{
+		printf("CMP4File::LoadFile(%s): fopen failed. \n", strFile.c_str());
+		return false;
+	}
 	fseek(pFile, 0, SEEK_END);
 	int iSize = ftell(pFile);
-	m_pData = new byte[iSize];
-	m_pEnd = m_pData + iSize;
+	byte* pData = new byte[iSize];
 	fseek(pFile, 0, SEEK_SET);
-	if (iSize != fread(m_pData, 1, iSize, pFile))
+	if (iSize != fread(pData, 1, iSize, pFile))
 	{
 		printf("read file failed. \n");
 		return false;
 	}
 	fclose(pFile);
 
-	return ParseFile();
+	bool bRes = LoadFile(pData, iSize);
+	delete[]pData;
+	pData = NULL;
+
+	return bRes;
 }
 
-bool CMP4File::ParseFile()
+bool CMP4File::LoadFile(byte* pData, int iDataSize)
 {
-	byteptr pCur = m_pData;
-	while (pCur < m_pEnd)
+	byteptr pCur = pData;
+	byteptr pEnd = pCur + iDataSize;
+	while (pCur < pEnd)
 	{
 		BaseBox* pBox = BaseBox::GetBoxFromFile(pCur);
 		if (pBox)
@@ -62,3 +64,26 @@ bool CMP4File::ParseFile()
 
 	return true;
 }
+
+bool CMP4File::SaveFile(std::string strFile)
+{
+	/*CMP4File::SaveFile();
+
+	FILE* pFile = fopen(strFile.c_str(), "rb");
+	if (!pFile)
+	{
+		printf("CMP4File::LoadFile(%s): fopen failed. \n", strFile.c_str());
+		return false;
+	}
+	fwrite(m_pSaveData,)
+	int iFileSize = m_pLoadEnd - m_pLoadData;
+	byte* pData = new byte[iFileSize];*/
+
+	return true;
+}
+
+bool CMP4File::SaveFile()
+{
+	return true;
+}
+
