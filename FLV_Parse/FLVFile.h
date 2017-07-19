@@ -11,11 +11,11 @@ public:
 public:
 
 	// 加载文件,读取数据;
-	bool LoadFile(char* strFile);
+	bool LoadFile(const char* strFile);
 
 	// 起始dStart~dEnd的音视频保存文件;
 	// 要求0~1, dEnd > dStart 否则返回 false;
-	bool SaveFile(char* strFile, double dStart, double dEnd);
+	bool SaveFile(const char* strFile, double dStart, double dEnd);
 
 	// 显示;
 	void Display();
@@ -26,7 +26,7 @@ protected:
 	// 打包数据;
 	bool WriteData(byte_ptr pData, int &iSize, double dStart, double dEnd);
 
-private:
+public:
 	CFLVFileHeader		m_flvHeader;
 	CFLVFileBody		m_flvBody;
 	int					m_iSize;

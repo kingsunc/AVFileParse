@@ -42,6 +42,6 @@ public:
 	// 获取Tag大小;
 	int GetTagSize();
 
-private:
+public:
 	flvtagheader_data m_data;
 };

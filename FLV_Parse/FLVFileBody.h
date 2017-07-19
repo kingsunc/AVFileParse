@@ -19,6 +19,6 @@ public:
 	// œ‘ æ;
 	void Display();
 
-private:
+public:
 	VecFlvTag	m_vecFlvTags;
 };

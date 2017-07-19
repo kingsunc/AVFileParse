@@ -9,7 +9,7 @@ CFLVFile::~CFLVFile()
 
 }
 
-bool CFLVFile::LoadFile(char* strFile)
+bool CFLVFile::LoadFile(const char* strFile)
 {
 	if (!strFile)
 	{
@@ -41,7 +41,7 @@ bool CFLVFile::LoadFile(char* strFile)
 
 // 起始dStart~dEnd的音视频保存文件;
 // 要求0~1, dEnd > dStart 否则返回 false;
-bool CFLVFile::SaveFile(char* strFile, double dStart, double dEnd)
+bool CFLVFile::SaveFile(const char* strFile, double dStart, double dEnd)
 {
 	if (!strFile)
 	{

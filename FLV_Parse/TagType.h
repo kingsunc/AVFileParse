@@ -18,7 +18,7 @@ public:
 	// 是否视频的关键帧;
 	virtual bool IsKeyFrame();
 
-protected:
+public:
 	byte_ptr		m_pData;
 	int				m_iSize;
 };

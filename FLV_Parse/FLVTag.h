@@ -19,7 +19,7 @@ public:
 
 	bool IsKeyFrame();
 
-private:
+public:
 	CFLVTagHeader	m_tagHeader;
 	CFLVTagBody		m_tagBody;
 };

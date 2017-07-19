@@ -32,6 +32,6 @@ public:
 	// ÏÔÊ¾;
 	void Display();
 
-private:
+public:
 	flvfileheader_data		m_data;
 };
