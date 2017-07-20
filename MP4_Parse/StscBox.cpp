@@ -36,7 +36,7 @@ int StscBox::ParseAttrs(byteptr &pData)
 	int iPrintf = min(m_vecStscData.size(), 10);
 	for (int j = 0; j < iPrintf; j++)
 	{
-		printf("\t FirstChunk : %d, SampPerChunk: %d, SampDesIndex : %d \n",
+		printf("\t FirstChunk : %3d, SampPerChunk: %3d, SampDesIndex : %3d \n",
 			m_vecStscData[j].iFirstChunk, m_vecStscData[j].iSampPerChunk, m_vecStscData[j].iSampDesIndex);
 	}
 	printf("\t ... \n");
