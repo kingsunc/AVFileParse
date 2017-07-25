@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WAV_Parse", "WAV_Parse.vcxproj", "{8B8D8E52-408E-4596-ADC8-B586ECE18DA1}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BMP_Parse", "..\BMP_Parse\BMP_Parse.vcxproj", "{40DF3618-E7AE-4272-A075-B2CB810EFFCC}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -17,10 +15,6 @@ Global
 		{8B8D8E52-408E-4596-ADC8-B586ECE18DA1}.Debug|Win32.Build.0 = Debug|Win32
 		{8B8D8E52-408E-4596-ADC8-B586ECE18DA1}.Release|Win32.ActiveCfg = Release|Win32
 		{8B8D8E52-408E-4596-ADC8-B586ECE18DA1}.Release|Win32.Build.0 = Release|Win32
-		{40DF3618-E7AE-4272-A075-B2CB810EFFCC}.Debug|Win32.ActiveCfg = Debug|Win32
-		{40DF3618-E7AE-4272-A075-B2CB810EFFCC}.Debug|Win32.Build.0 = Debug|Win32
-		{40DF3618-E7AE-4272-A075-B2CB810EFFCC}.Release|Win32.ActiveCfg = Release|Win32
-		{40DF3618-E7AE-4272-A075-B2CB810EFFCC}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

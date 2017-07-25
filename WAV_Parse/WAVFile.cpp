@@ -52,26 +52,26 @@ bool CWAVFile::SaveFile(const char* strFile, RECT rt)
 void CWAVFile::Display()
 {
 	printf("************************ RIFF HEADER ************************\n");
-	printf("\t RiffID           \t : %s \n", BytesToStr(m_RiffHeader.szRiffID, 4).c_str());
-	printf("\t RiffSize         \t : %d \n", m_RiffHeader.dwRiffSize);
-	printf("\t RiffFormat       \t : %s \n", BytesToStr(m_RiffHeader.szRiffFormat, 4).c_str());
+	printf("\t RiffID           \t : %s \n", BytesToStr(m_WaveHeader.szRiffID, 4).c_str());
+	printf("\t RiffSize         \t : %d \n", m_WaveHeader.dwRiffSize);
+	printf("\t RiffFormat       \t : %s \n", BytesToStr(m_WaveHeader.szRiffFormat, 4).c_str());
 
 	printf("************************ FMT BLOCK ************************\n");
-	printf("\t szFmtID           \t : %s \n", BytesToStr(m_FmtBlock.szFmtID, 4).c_str());
-	printf("\t dwFmtSize         \t : %d \n", m_FmtBlock.dwFmtSize);
-	printf("\t wFormatTag        \t : %d \n", m_FmtBlock.wavFormat.wFormatTag);
-	printf("\t wChannels         \t : %d \n", m_FmtBlock.wavFormat.wChannels);
-	printf("\t dwSamplesPerSec   \t : %d \n", m_FmtBlock.wavFormat.dwSamplesPerSec);
-	printf("\t dwAvgBytesPerSec  \t : %d \n", m_FmtBlock.wavFormat.dwAvgBytesPerSec);
-	printf("\t wBlockAlign       \t : %d \n", m_FmtBlock.wavFormat.wBlockAlign);
-	printf("\t wBitsPerSample    \t : %d \n", m_FmtBlock.wavFormat.wBitsPerSample);
+	printf("\t szFmtID           \t : %s \n", BytesToStr(m_WaveHeader.szFmtID, 4).c_str());
+	printf("\t dwFmtSize         \t : %d \n", m_WaveHeader.dwFmtSize);
+	printf("\t wFormatTag        \t : %d \n", m_WaveHeader.wavFormat.wFormatTag);
+	printf("\t wChannels         \t : %d \n", m_WaveHeader.wavFormat.wChannels);
+	printf("\t dwSamplesPerSec   \t : %d \n", m_WaveHeader.wavFormat.dwSamplesPerSec);
+	printf("\t dwAvgBytesPerSec  \t : %d \n", m_WaveHeader.wavFormat.dwAvgBytesPerSec);
+	printf("\t wBlockAlign       \t : %d \n", m_WaveHeader.wavFormat.wBlockAlign);
+	printf("\t wBitsPerSample    \t : %d \n", m_WaveHeader.wavFormat.wBitsPerSample);
 
 	printf("************************ DATA HEADER ************************\n");
-	printf("\t szDataID           \t : %s \n", BytesToStr(m_DataHeader.szDataID, 4).c_str());
-	printf("\t dwDataSize         \t : %d \n", m_DataHeader.dwDataSize);
+	printf("\t szDataID           \t : %s \n", BytesToStr(m_WaveHeader.szDataID, 4).c_str());
+	printf("\t dwDataSize         \t : %d \n", m_WaveHeader.dwDataSize);
 
 	printf("************************ WAVE DATA ************************\n");
-	int iSize = min(100, m_DataHeader.dwDataSize);
+	int iSize = min(100, m_WaveHeader.dwDataSize);
 	for (int i = 0; i < iSize; i++)
 	{
 		printf(" %02X ", m_pData[i]);
@@ -81,24 +81,16 @@ void CWAVFile::Display()
 
 bool CWAVFile::ReadData(byte_ptr pData, int iSize)
 {
-	// RIFF_HEADER;
-	int iRiffHeaderSize = sizeof(m_RiffHeader);
-	memcpy(&m_RiffHeader, pData, iRiffHeaderSize);
+	// WAVE_HEADER;
+	int iRiffHeaderSize = sizeof(m_WaveHeader);
+	memcpy(&m_WaveHeader, pData, iRiffHeaderSize);
 	pData += iRiffHeaderSize;
-	// FMT_BLOCK;
-	int iFmtBlockSize = sizeof(m_FmtBlock);
-	memcpy(&m_FmtBlock, pData, iFmtBlockSize);
-	pData += iFmtBlockSize;
-	// DATA_HEADER;
-	int iDataHeaderSize = sizeof(m_DataHeader);
-	memcpy(&m_DataHeader, pData, iDataHeaderSize);
-	pData += iDataHeaderSize;
 
 	if (m_pData)
 	{
 		delete []m_pData;
 	}
-	int iDataSize = m_DataHeader.dwDataSize;
+	int iDataSize = m_WaveHeader.dwDataSize;
 	m_pData = new byte[iDataSize];
 	memcpy(m_pData, pData, iDataSize);
 
