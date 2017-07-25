@@ -27,6 +27,5 @@ public:
 	BITMAPFILEHEADER	m_bmpFileHeader;
 	BITMAPINFOHEADER	m_bmpInfoHeader;
 	byte*				m_pData;
-	int					m_iSize;
+	int					m_iFileSize;
 };
-

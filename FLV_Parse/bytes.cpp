@@ -1,6 +1,5 @@
 #include "bytes.h"
 
-
 int BytesToInt(byte_ptr pData, int iCount)
 {
 	int iResult = 0;

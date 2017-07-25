@@ -28,17 +28,17 @@ bool CBMPFile::LoadFile(const char* strFile)
 		return false;
 	}
 	fseek(pFile, 0, SEEK_END);
-	m_iSize = ftell(pFile);
-	byte_ptr pData = new byte[m_iSize];
+	m_iFileSize = ftell(pFile);
+	byte_ptr pData = new byte[m_iFileSize];
 	fseek(pFile, 0, SEEK_SET);
-	if (m_iSize != fread(pData, sizeof(byte), m_iSize, pFile))
+	if (m_iFileSize != fread(pData, sizeof(byte), m_iFileSize, pFile))
 	{
 		printf("read file is failed. \n");
 		return false;
 	}
 	fclose(pFile);
 
-	bool bResult = ReadData(pData, m_iSize);
+	bool bResult = ReadData(pData, m_iFileSize);
 	delete[]pData;
 	pData = NULL;
 	return bResult;
@@ -72,8 +72,8 @@ void CBMPFile::Display()
 	printf("\t biClrImportant   \t : %d \n", m_bmpInfoHeader.biClrImportant);
 
 	printf("************************ BITMAP DATA ************************\n");
-	int iSize = min(100, m_bmpInfoHeader.biSizeImage);
-	for (int i = 0; i < iSize; i++)
+	int iDataSize = min(100, m_bmpInfoHeader.biSizeImage);
+	for (int i = 0; i < iDataSize; i++)
 	{
 		printf(" %02X ", m_pData[i]);
 	}
@@ -82,9 +82,11 @@ void CBMPFile::Display()
 
 bool CBMPFile::ReadData(byte_ptr pData, int iSize)
 {
+	// BITMAPFILEHEADER;
 	int iFileHeaderSize = sizeof(m_bmpFileHeader);
 	memcpy(&m_bmpFileHeader, pData, iFileHeaderSize);
 	pData += iFileHeaderSize;
+	// BITMAPINFOHEADER;
 	int iInfoHeaderSize = sizeof(m_bmpInfoHeader);
 	memcpy(&m_bmpInfoHeader, pData, iInfoHeaderSize);
 	pData += iInfoHeaderSize;
