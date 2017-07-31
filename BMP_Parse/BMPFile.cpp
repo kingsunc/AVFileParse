@@ -82,6 +82,8 @@ void CBMPFile::Display()
 
 bool CBMPFile::ReadData(byte_ptr pData, int iSize)
 {
+	byte ch[1000];
+	memcpy(ch, pData, 1000);
 	// BITMAPFILEHEADER;
 	int iFileHeaderSize = sizeof(m_bmpFileHeader);
 	memcpy(&m_bmpFileHeader, pData, iFileHeaderSize);

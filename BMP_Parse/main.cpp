@@ -2,11 +2,13 @@
 
 int main()
 {
-	CBMPFile flvFile;
-	bool bRes = flvFile.LoadFile("../testfile/bmp_test.bmp");
+	unsigned ch1 = 'B';
+	unsigned ch2 = 'P';
+	CBMPFile bmpFile;
+	bool bRes = bmpFile.LoadFile("../testfile/bmp_test.bmp");
 	assert(bRes);
 
-	flvFile.Display();
+	bmpFile.Display();
 
 	return 1;
 }
